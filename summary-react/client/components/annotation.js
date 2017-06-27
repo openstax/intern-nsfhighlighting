@@ -103,7 +103,7 @@ var AnnotationList = React.createClass({
 
     )}else{
       return(
-      <div></div>)
+      <h4>Loading...</h4>)
     }
   }
 });
