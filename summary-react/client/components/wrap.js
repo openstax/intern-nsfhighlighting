@@ -45,7 +45,7 @@ var Wrap = React.createClass({
       // Filter and map urls to annotations:
       var All = {};
       var x;
-      var items = this.state.items;
+      var items =response.data.rows;;
 
       for (x in items){
         var uri = String(items[x].uri);
