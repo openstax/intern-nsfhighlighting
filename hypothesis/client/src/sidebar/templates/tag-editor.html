@@ -1,0 +1,41 @@
+<style type="text/css">
+  .dropbtn {
+    background-color: #626262;
+    color: #ECECEC;
+    padding: 9px;
+    border: none;
+    cursor: pointer;
+    align-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    height: 30px;
+    width: 50%;
+  }
+</style>
+
+<!-- <tags-input ng-model="vm.tagList"
+  name="tags"
+  
+  on-tag-added="vm.onTagsChanged()"
+  on-tag-removed="vm.onTagsChanged()"
+  >
+  <auto-complete        
+    source="['Biology', 'Physics', 'Chemistry', 'English']"
+    min-length="0"
+    max-results-to-show="10"
+  >
+  </auto-complete>
+  </tags-input> -->
+
+
+<!-- Not neccessary to put class="tags" here-->
+<div class="tags">
+<!-- Important: cannot use vm.tagList anymore because it affect the data binding -->
+  <select class='dropbtn' ng-model="vm.tag" ng-change='vm.selectTags(vm.tag)'> 
+  <!-- No placeholder option: this is a work around -->
+  <option value="" selected="selected">Choose Tags</option>
+  <option ng-repeat="x in vm.tagOptions" value="{{x}}">{{x}}</option>
+  </select>
+</div>
+
+
