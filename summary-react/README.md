@@ -27,11 +27,6 @@ npm install radium
 npm install axios
 npm install react-bootstrap
 ```
-### Run
-```
-yarn start
-```
-The server should run on http://localhost:8080/
 
 ## Setup
 ### Insert Hypothes.is Parameters
@@ -60,4 +55,8 @@ componentWillMount: function(){
     })
 ...
 ```
-
+## Run
+```
+yarn start
+```
+The server should run on http://localhost:8080/
