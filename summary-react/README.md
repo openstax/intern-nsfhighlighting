@@ -21,17 +21,6 @@ cd summary-react
 yarn add babel-loader babel-core babel-preset-es2015 babel-preset-react --dev
 touch .babelrc
 ```
-### Update .babelrc file
-```
-/* 
-    ./.babelrc
-*/  
-{
-    "presets":[
-        "es2015", "react"
-    ]
-}
-```
 ### Install Modules
 ```
 npm install radium
