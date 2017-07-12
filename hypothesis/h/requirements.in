@@ -1,0 +1,45 @@
+PyJWT
+SQLAlchemy >= 1.1.4
+alembic
+backports.functools_lru_cache
+bcrypt
+bleach >= 2.0
+celery == 3.1.25  # Pin to latest 3.1.x to ensure forwards-compat with 4.x
+certifi
+cffi
+click
+cryptography
+deform < 1.0
+deform-jinja2
+elasticsearch < 2.0.0
+enum34
+gevent
+gunicorn
+itsdangerous
+jsonpointer == 1.0
+jsonschema
+kombu <3.1 # Pinned because of celery pin
+mistune
+newrelic
+passlib
+psycogreen
+psycopg2
+pyparsing >= 2.1.5
+pyramid
+pyramid_authsanity >= 1.0.0  # 1.0.0 fixes an IE bug: https://git.io/vH3mi
+pyramid_layout
+pyramid-jinja2
+pyramid-services
+pyramid_mailer
+pyramid_tm
+python-dateutil
+python-slugify < 1.2.0
+raven
+requests-aws4auth >= 0.9
+statsd
+transaction
+venusian
+wsaccel
+ws4py >= 0.4.0
+zope.interface
+zope.sqlalchemy

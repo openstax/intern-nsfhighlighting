@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "sources": [
+    "node_modules/browser-pack/_prelude.js",
+    "h/static/scripts/legacy-site.js"
+  ],
+  "names": [],
+  "mappings": "AAAA;ACAA;;AAEA,OAAO,CAAP,GAAW,OAAO,MAAP,GAAgB,QAAQ,QAAR,CAA3B;AACA,QAAQ,WAAR;;AAEA,IAAI,OAAO,MAAP,KAAkB,SAAtB,EAAiC;AAC/B,MAAI,WAAW,SAAS,sBAAT,CAAgC,kBAAhC,CAAf;AACA,MAAI,UAAJ;AACA,OAAK,IAAI,CAAT,EAAY,IAAI,SAAS,MAAzB,EAAiC,GAAjC,EAAsC;AACpC,aAAS,CAAT,EAAY,SAAZ,CAAsB,MAAtB,CAA6B,QAA7B;AACD;AACD,aAAW,SAAS,sBAAT,CAAgC,gBAAhC,CAAX;AACA,OAAK,IAAI,CAAT,EAAY,IAAI,SAAS,MAAzB,EAAiC,GAAjC,EAAsC;AACpC,aAAS,CAAT,EAAY,SAAZ,CAAsB,GAAtB,CAA0B,QAA1B;AACD;AACF;;AAED,IAAM,uBAAuB,SAAS,cAAT,CAAwB,wBAAxB,CAA7B;AACA,IAAI,oBAAJ,EAA0B;AACxB,uBAAqB,gBAArB,CAAsC,OAAtC,EAA+C,UAAC,KAAD,EAAW;AACxD,WAAO,KAAP,CAAa,8BAAb;AACA,UAAM,cAAN;AACD,GAHD;AAID;;AAED,IAAM,qBAAqB,SAAS,cAAT,CAAwB,6BAAxB,CAA3B;AACA,IAAI,kBAAJ,EAAwB;AACtB,qBAAmB,gBAAnB,CAAoC,OAApC,EAA6C,UAAC,KAAD,EAAW;AACtD,WAAO,MAAP,CAAc,QAAd,CAAuB,OAAvB;AACA,UAAM,cAAN;AACD,GAHD;AAID;;AAED,IAAM,UAAU,SAAS,aAAT,CAAuB,cAAvB,CAAhB;AACA,IAAI,OAAJ,EAAa;AACX,UAAQ,gBAAR,CAAyB,QAAzB,EAAmC,UAAC,KAAD,EAAW;AAC5C,QAAM,MAAM,MAAM,MAAN,CAAa,QAAb,CAAsB,GAAtB,CAA0B,KAAtC;AACA,QAAI,QAAQ,EAAZ,EAAgB;AACd,aAAO,QAAP,CAAgB,IAAhB,GAAuB,6BAA6B,GAApD;AACD;AACD,UAAM,cAAN;AACD,GAND;AAOD",
+  "file": "generated.js",
+  "sourceRoot": "",
+  "sourcesContent": [
+    "(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require==\"function\"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error(\"Cannot find module '\"+o+\"'\");throw f.code=\"MODULE_NOT_FOUND\",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require==\"function\"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})",
+    "'use strict';\n\nwindow.$ = window.jQuery = require('jquery');\nrequire('bootstrap');\n\nif (window.chrome !== undefined) {\n  let elements = document.getElementsByClassName('unhide-in-chrome');\n  let i;\n  for (i = 0; i < elements.length; i++) {\n    elements[i].classList.remove('hidden');\n  }\n  elements = document.getElementsByClassName('hide-in-chrome');\n  for (i = 0; i < elements.length; i++) {\n    elements[i].classList.add('hidden');\n  }\n}\n\nconst bookmarkletInstaller = document.getElementById('js-bookmarklet-install');\nif (bookmarkletInstaller) {\n  bookmarkletInstaller.addEventListener('click', (event) => {\n    window.alert('Drag me to the bookmarks bar');\n    event.preventDefault();\n  });\n}\n\nconst chromeextInstaller = document.getElementById('js-chrome-extension-install');\nif (chromeextInstaller) {\n  chromeextInstaller.addEventListener('click', (event) => {\n    window.chrome.webstore.install();\n    event.preventDefault();\n  });\n}\n\nconst viaForm = document.querySelector('.js-via-form');\nif (viaForm) {\n  viaForm.addEventListener('submit', (event) => {\n    const url = event.target.elements.url.value;\n    if (url !== '') {\n      window.location.href = 'https://via.hypothes.is/' + url;\n    }\n    event.preventDefault();\n  });\n}\n"
+  ]
+}
