@@ -19,3 +19,9 @@ Client example for json configeration:
 1. In client_json_config_example/index.htm line 11-32. It can change the color of the sidebar backgournd,
 some buttons. It won't be enough for our requirements. See example by clicking this link (a page hosted by 
 github): https://tianlantianlan95.github.io/TestTextbookHtmlBeta/
+
+Modification of the export api:
+Add python file name 'research.py' in the /h/h/views dir.
+Edit app.py in the /h/h to add route
+When host locally, a "http://localhost:[PORTNUMBER]/research_export" request can get a json response for
+export data. Will chage to csv later (need a customized renderer)
