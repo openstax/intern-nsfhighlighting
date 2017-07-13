@@ -73,3 +73,19 @@ def row2dict(row):
         else:
             d[column] = str(row[column])
     return d
+
+def urlParse(url):
+
+    split_url = url.split('/')
+
+    book = split_url[-3]
+    split_section = split_url[-1].split('.')
+    chapter = split_section[0]
+
+    if len(split_section) > 1:
+        section = split_section[1]
+    else:
+        # This means that the annotation was made in the introduction
+        section = '0'
+
+    return book, chapter, section
