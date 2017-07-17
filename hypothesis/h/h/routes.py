@@ -161,4 +161,6 @@ def includeme(config):
         'wordpress-plugin', 'https://wordpress.org/plugins/hypothesis/',
         static=True)
 
-    config.add_route('research_export', '/research_export')
+    config.add_route('json_export', '/research/json')
+    config.add_route('csv_export', '/research/csv')
+    
