@@ -133,3 +133,5 @@ def includeme(config):
     if asbool(config.registry.settings.get('h.debug')):
         config.include('pyramid_debugtoolbar')
         config.include('h.debug')
+    # Add customized renderer
+    config.add_renderer('csv', 'h.views.research.CSVRenderer')
