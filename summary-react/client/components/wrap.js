@@ -40,7 +40,7 @@ var Wrap = React.createClass({
     }
     })
     .then(function(response){
-      
+
 
       // Filter and map urls to annotations:
       var All = {};
@@ -59,7 +59,7 @@ var Wrap = React.createClass({
           All[uri] = [annotation];
         }
       }
-      
+
       this.setState({mapping:All, items:response.data.rows, finished:true});
 
     }.bind(this));
