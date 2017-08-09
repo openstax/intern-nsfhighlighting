@@ -15,7 +15,7 @@ var Bar = React.createClass({
             <img style={{width:"200px", paddingLeft:"30px"}} src="https://openstax.org/images/logo.svg"></img>
           </Col>
           <Col md={8}>
-
+            
           </Col>
         </Row>
       </div>
